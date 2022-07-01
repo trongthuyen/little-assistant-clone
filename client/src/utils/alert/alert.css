@@ -1,0 +1,27 @@
+/* alert message */
+.alert__message {
+    text-align: center;
+}
+
+.alert__message--danger p {
+    color: rgba(235, 8, 8, 0.925);
+}
+
+/* alert modal */
+.alert__modal {
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.alert__modal i {
+    font-size: 3rem;
+    display: block;
+}
+
+.alert__modal--danger i {
+    color: rgba(235, 8, 8, 0.925);
+}
+
+.alert__modal--success i {
+    color: rgb(29, 226, 29);
+}

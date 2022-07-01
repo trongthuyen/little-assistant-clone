@@ -1,0 +1,6 @@
+.container.v1 {
+    margin: 0;
+    min-height: calc(100vh - 2rem);
+    transition-duration: 0.3s;
+    padding-left: 1rem;
+}

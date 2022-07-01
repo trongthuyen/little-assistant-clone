@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600&family=Roboto:wght@300;400;700&display=swap');
+
+.header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: hsla(var(--second-hue), var(--sat), 80%, 0.1); */
+    /* box-shadow: 0 5px 20px 0px rgba(119, 119, 119, 0.356); */
+    border-radius: 0 0 10px 10px;
+    /* padding: 0 0.5rem; */
+}
+
+.header__form {
+    max-width: 400px;
+    width: 400px;
+}
+
+.header__form form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid hsla(var(--first-hue), var(--sat), 50%, 0.9); */
+    background: hsl(220deg 36% 22%);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.header__form form input {
+    flex: 1;
+    color: var(--text-color);
+    padding: 5px 16px;
+    line-height: 1.65rem;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.header__form form button i {
+    font-size: 2rem;
+    padding: 5px 12px;
+    color: var(--text-color);
+}
+
+.header__form form button {
+    background: hsl(220deg 36% 22%);
+}
+
+.header__form form button:hover {
+    opacity: 0.8;
+}
+
+.header__timestamp {
+    display: flex;
+    align-items: center;
+}
+
+.header__timestamp--item {
+    padding: 8px;
+    font-size: 1.5rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+}
+
+.header__user {
+    display: flex;
+    align-items: center;
+}
+
+.header__user a img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid #aaa;
+}
+
+.header__user--item {
+    margin-top: 8px;
+    margin-left: 2rem;
+}
+
+.header__user--item i {
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 2rem;
+}
+
+.header__user--item i:hover {
+    opacity: 0.8;
+}
+
+/* header portfolio */
+.header.header__portfolio {
+    position: fixed;
+    top: 0;
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 20px 0px rgba(0, 0, 0, 0.832);
+    background: var(--body-color);
+}
+
+.header .logo {
+    width: var(--h1-font-size);
+    height: var(--h1-font-size);
+}
+
+.header span {
+    margin: 0;
+}

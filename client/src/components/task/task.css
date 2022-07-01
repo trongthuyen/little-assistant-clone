@@ -1,0 +1,154 @@
+.task {
+    /* border-radius: 6px; */
+    margin-bottom: 8px;
+    padding: 10px;
+    position: relative;
+    color: var(--body-color);
+    cursor: default;
+    border-top: 14px dotted var(--body-color);
+    background: rgb(235, 227, 165);
+}
+
+.task::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-width: 12px 12px;
+    border-style: solid;
+    border-color: rgb(216, 214, 200) var(--body-color) var(--body-color) rgb(216, 214, 200);
+    box-shadow: -2px 4px 8px 0px var(--body-color);
+}
+
+.task.done::after {
+    border-color: rgba(75, 231, 28, 0.59) var(--body-color) var(--body-color) rgba(75, 231, 28, 0.59);
+}
+.task.processing::after {
+    border-color: rgba(255, 196, 0, 0.59) var(--body-color) var(--body-color) rgba(255, 196, 0, 0.59);
+}
+.task.coming::after {
+    border-color: rgba(224, 48, 4, 0.59) var(--body-color) var(--body-color) rgba(224, 48, 4, 0.59);
+}
+
+.pushpin {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    cursor: pointer;
+}
+
+.task h4 {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.task p {
+    font-size: 14px;
+    border-top: 1px solid var(--body-color);
+    padding: 6px 0;
+}
+
+.task p:nth-child(2) {
+    margin: 8px 0;
+    text-align: center;
+}
+
+.task p a {
+    font-size: 14px;
+    color: rgb(255, 0, 221);
+}
+
+.btn-delete-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition-duration: 0.2s;
+}
+
+
+.task__form {
+    width: 100%;
+    margin: 1rem auto;
+    background: var(--container-color);
+    border: 8px;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.task__form h3 {
+    color: var(--first-color);
+    text-align: center;
+}
+
+.task__form--group {
+    display: flex;
+    margin: 4px 0;
+}
+
+.task__form--group.input {
+    flex-direction: column;
+}
+
+.task__form--group.input.time {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.task__form--group.input.time label {
+    display: flex;
+    align-items: center;
+}
+
+.task__form--group.input.time label input {
+    width: 80px;
+    margin-left: 12px;
+}
+
+.task__form--group.radio .task__form--input.radio {
+    display: none;
+    margin-right: 6px;
+}
+
+.task__form--group.radio {
+    justify-content: space-evenly;
+}
+
+.task__form--group.radio .label-radio {
+    cursor: pointer;
+}
+
+.task__form--input {
+    border-bottom: 2px solid var(--first-color);
+    border-radius: 4px;
+    padding: 4px 8px;
+    outline: none;
+    background: none;
+    color: aliceblue;
+
+}
+
+.label-radio.active {
+    color: white;
+}
+
+.btn.btn-sched {
+    padding: 4px 8px;
+    background: var(--first-color);
+    border-radius: 4px;
+    width: 100px;
+    margin: 0.3rem auto 0;
+}

@@ -1,0 +1,138 @@
+POST http://localhost:5000/api/user/register
+Content-Type: application/json
+
+{
+    "name": "Trong Thuyen",
+    "email": "trongthuyen2606@gmail.com",
+    "password": "111111"
+}
+
+###
+POST http://localhost:5000/api/user/activate_email
+Content-Type: application/json
+
+{
+    "activationToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVHJvbmcgVGh1eWVuIiwiZW1haWwiOiJ0cm9uZ3RodXllbjI2MDZAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTIkbWVsNUs3M3lQdDBqcVROcXFZMGR2dVZIdDA5ckZCT1NiZGM3cmxzRGVodVk2Ukt1T1h3ME8iLCJpYXQiOjE2NDgyODgyNTgsImV4cCI6MTY0ODI4ODU1OH0.d1ZoRqmsR9PQxWdotOetBiCmcJFEujoNFyLrrhLzaPo"
+}
+
+###
+POST http://localhost:5000/api/user/login
+Content-Type: application/json
+
+{
+    "email": "pandorakazira@gmail.com",
+    "password": "111111"
+}
+
+###
+GET http://localhost:5000/api/user/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2UyMTcyMjNmNmQzYjAzNjgwN2JlYSIsImlhdCI6MTY0ODQzODMyOSwiZXhwIjoxNjQ4NDQwMTI5fQ.a3eaoiOtULZcUu4SjsYw080wIpZlwVXFxPOpgy9H8IM
+
+###
+GET http://localhost:5000/api/user/info
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2UyMTcyMjNmNmQzYjAzNjgwN2JlYSIsImlhdCI6MTY0ODQzODMyOSwiZXhwIjoxNjQ4NDQwMTI5fQ.a3eaoiOtULZcUu4SjsYw080wIpZlwVXFxPOpgy9H8IM
+
+###
+GET http://localhost:5000/api/user/all_users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2UyMTcyMjNmNmQzYjAzNjgwN2JlYSIsImlhdCI6MTY0OTkxODM0OSwiZXhwIjoxNjUwNTIzMTQ5fQ.rq4HMxBVAQzv97Ferzhai176lIFwZVHQRNRGxm5bxGI
+
+###
+POST http://localhost:5000/api/user/forgot_password
+Content-Type: application/json
+
+{
+    "email": "pandorakazira@gmail.com"
+}
+
+###
+POST http://localhost:5000/api/user/reset_password
+Content-Type: application/json
+
+{
+    "email": "pandorakazira@gmail.com",
+    "password": "123456"
+}
+
+###
+POST http://localhost:5000/api/user/update_role
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2UyMTcyMjNmNmQzYjAzNjgwN2JlYSIsImlhdCI6MTY0ODQzODMyOSwiZXhwIjoxNjQ4NDQwMTI5fQ.a3eaoiOtULZcUu4SjsYw080wIpZlwVXFxPOpgy9H8IM
+
+{
+    "email": "trongthuyen2606@gmail.com",
+    "role": 1
+}
+
+###
+POST http://localhost:5000/api/scheduler/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2UyMTcyMjNmNmQzYjAzNjgwN2JlYSIsImlhdCI6MTY0OTUxODgzMSwiZXhwIjoxNjUwMTIzNjMxfQ.E1Btzkgyh57xV2lbct9X_GFhtFXldVxspn8LtFlbUYQ
+
+{
+    "description": "Di Vung Tau choi",
+    "typeTask": "Plan",
+    "startDateAt": "2022-4-10",
+    "endDateAt": "2022-4-11",
+    "startTimeAt": "13:00",
+    "endTimeAt": "13:00",
+    "place": "Vung Tau"
+}
+
+###
+POST http://localhost:5000/api/room/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2UyMTcyMjNmNmQzYjAzNjgwN2JlYSIsImlhdCI6MTY0OTkxODM0OSwiZXhwIjoxNjUwNTIzMTQ5fQ.rq4HMxBVAQzv97Ferzhai176lIFwZVHQRNRGxm5bxGI
+
+{
+    "name": "Room 5",
+    "description": "This is room 5"
+}
+
+###
+POST http://localhost:5000/api/room/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2UyMTcyMjNmNmQzYjAzNjgwN2JlYSIsImlhdCI6MTY0OTkxODM0OSwiZXhwIjoxNjUwNTIzMTQ5fQ.rq4HMxBVAQzv97Ferzhai176lIFwZVHQRNRGxm5bxGI
+
+{
+    "user2": "6242a408855c91cbfb6843c8"
+}
+
+###
+POST http://localhost:5000/api/room/add_user/6257d22eec3e332b5bd31a0b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2UyMTcyMjNmNmQzYjAzNjgwN2JlYSIsImlhdCI6MTY0OTkxODM0OSwiZXhwIjoxNjUwNTIzMTQ5fQ.rq4HMxBVAQzv97Ferzhai176lIFwZVHQRNRGxm5bxGI
+
+{
+    "user": "623ee218f792809aeea9acc9"
+}
+
+###
+POST http://localhost:5000/api/room/remove_user/6257d22eec3e332b5bd31a0b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2UyMTcyMjNmNmQzYjAzNjgwN2JlYSIsImlhdCI6MTY0OTkxODM0OSwiZXhwIjoxNjUwNTIzMTQ5fQ.rq4HMxBVAQzv97Ferzhai176lIFwZVHQRNRGxm5bxGI
+
+{
+    "user": "623ee218f792809aeea9acc9"
+}
+
+###
+GET http://localhost:5000/api/room/remove_room/6257d22eec3e332b5bd31a0b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2UyMTcyMjNmNmQzYjAzNjgwN2JlYSIsImlhdCI6MTY0OTkxODM0OSwiZXhwIjoxNjUwNTIzMTQ5fQ.rq4HMxBVAQzv97Ferzhai176lIFwZVHQRNRGxm5bxGI
+
+###
+GET http://localhost:5000/api/room/get_single_room
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2UyMTcyMjNmNmQzYjAzNjgwN2JlYSIsImlhdCI6MTY0OTkxODM0OSwiZXhwIjoxNjUwNTIzMTQ5fQ.rq4HMxBVAQzv97Ferzhai176lIFwZVHQRNRGxm5bxGI
+Content-Type: application/json
+
+{
+    "user2": "6242a408855c91cbfb6843c8"
+}
+
+###
+GET http://localhost:5000/api/room/get_single_room/6258ed2948fd6eba5a894674
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2UyMTcyMjNmNmQzYjAzNjgwN2JlYSIsImlhdCI6MTY0OTkxODM0OSwiZXhwIjoxNjUwNTIzMTQ5fQ.rq4HMxBVAQzv97Ferzhai176lIFwZVHQRNRGxm5bxGI
+Content-Type: application/json
+
+{
+    "user2": "6242a408855c91cbfb6843c8"
+}
